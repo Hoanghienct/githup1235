@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
+<html>
 <body>
-$END$
+
+<
+
+<script>
+
+    let sum = 0; // Biến lưu trữ tổng các giá trị
+    let input; // Biến lưu trữ giá trị nhập vào từ người dùng
+    let values = 0; // Mảng lưu các giá trị đã nhập
+
+    do {
+        // Nhận giá trị từ người dùng
+        input = parseFloat(prompt("Nhập một số (Nhập -1 để kết thúc):"));
+        // Kiểm tra nếu người dùng không nhập -1
+        if (input !== -1) {
+
+            sum += input;
+        }
+
+    } while (input !== -1); // Vòng lặp tiếp tục cho đến khi người dùng nhập -1
+
+    // Hiển thị các giá trị đã nhập và tổng
+    alert("Các giá trị đã nhập: " + values.join(", "));
+    alert("Tổng các giá trị: " + sum);
+
+</script>
+
 </body>
 </html>

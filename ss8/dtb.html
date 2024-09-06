@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let dtb = +prompt('nhập điểm trung bình');
+    if(dtb>=0&&dtb<=10&&!isNaN(dtb)) {
+        if (dtb >= 8) {
+            alert('đạt học sinh giỏi')
+        } else if (dtb >= 6.5) {
+            alert('học sinh khá')
+        } else if (dtb >= 5) {
+            alert('học sinh trung bình')
+        } else if (dtb >= 3.5) {
+            alert('học sinh yếu')
+        } else {
+            alert('học sinh kém')
+        }
+
+    }
+</script>
 </body>
 </html>

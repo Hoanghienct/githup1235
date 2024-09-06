@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>Tính chỉ số cân nặng</h1>
+<h3 >Nhập cân nặng: (kg)<input type="number" id="weight"></h3>
+<h3 >Nhập chiều cao: (m)<input type="number" id="height"></h3>
+
+<button onclick="kt()">Kiểm tra</button>
+<p id="demo" ></p>
+<script>
+    function kt(){
+        let we =document.getElementById('weight');
+        let he =document.getElementById('height');
+        let wvalue=we.value;
+        let hvalue=he.value;
+        let bmi =parseInt(wvalue) /(parseInt(hvalue)^2);
+        let k
+         if (bmi < 18) {
+            k='Underweight'
+        } else if (bmi < 25.0) {
+            k= 'Normal'
+        } else if (bmi < 30.0) {
+            k= 'Overweight'
+        } else {
+            k= 'Obese'
+        }
+
+
+        document.getElementById("demo").innerHTML = k ;
+    }
+
+</script>
+
 </body>
 </html>

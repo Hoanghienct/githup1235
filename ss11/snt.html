@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="my.js"></script>
 </head>
 <body>
-$END$
+<!--Đặt lính canh-->
+<!--Kiểm tra 1 số có phải là số nguyên tố hay không-->
+<!--//-->
+<!--B1: khai báo 1 biến đếm count dùng để đếm số lượng số chia hết-->
+<!--//-->
+<!--B2: vòng lặp chạy từ 1 đến n (với n là số chúng ta nhập từ bàn phím)-->
+<!--2 //-->
+<!--B3: kiểm tra nếu n%i ===0 thì count tăng lên 1-->
+<!--B4: kết thúc vòng lặp thi kiểm tra count có bằng 2 hay không. Nếu bằng 2 thi số đị-->
+<script>
+    function isPrime(n) {
+        let count = 0;
+
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                count++;
+            }
+        }
+        return count === 2;
+    }
+    let number = prompt("Nhập vào số cần kiểm tra:");
+    number = parseInt(number);
+
+    if (isPrime(number)) {
+        alert(`${number} là số nguyên tố.`);
+    } else {
+        alert(`${number} không phải là số nguyên tố.`);
+    }
+</script>
 </body>
 </html>

@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input  type="text" id="input" >
+<input type="button" value="dich"  onclick="dich()">
+<script>
+    function dich(){
+    let value=document.getElementById('input').value;
+    let tv=['chó ','mèo ','gà ','vịt','cá ','lợn'];
+    let ta =['dog','cat','chicken','duck','fish','pig'];
+    let luu=''
+    for (let i =0 ; i< ta.length;i++){
+        if (value === ta[i]){
+             luu=(tv[i]);
+            break;
+        }
+        else if (i+1===ta.length){
+            luu=("ko");
+        }
+
+
+
+    }
+    document.getElementById('relu').innerHTML=luu;
+    }
+</script>
+<p id="relu"></p>
 </body>
 </html>

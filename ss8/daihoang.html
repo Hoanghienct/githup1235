@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngay Trong Thang</title>
 </head>
 <body>
-$END$
+<script>
+    let thang = prompt("Nhap Thang: ") * 1;
+    let nam = prompt("nhap Nam: ") *1;
+    if(isNaN(thang))
+    {
+        alert("Nhap sai roi, nhap lai!!!")
+    }
+    else if(thang<=0 && thang>12)
+    {
+        alert("Chi duoc nhap tu 1 toi 12 thoi, nhap lai!")
+    }
+    else
+    {
+        if(nam%4===0 && thang===2)
+        {
+            alert("thang 2 trong nam nhuan co 29 ngay")
+        }
+        else if(thang===1)
+        {
+            alert("Thang 1 co 31 ngay!")
+        }
+        else if(thang===3)
+        {
+            alert("Thang 3 co 31 ngay!")
+        }
+        else if(thang===5)
+        {
+            alert("Thang 5 co 31 ngay!")
+        }
+        else if(thang===7)
+        {
+            alert("Thang 7 co 31 ngay!")
+        }
+        else if(thang===8)
+        {
+            alert("Thang 8 co 31 ngay!")
+        }
+        else if(thang===10)
+        {
+            alert("Thang 10 co 31 ngay!")
+        }
+        else if(thang===12)
+        {
+            alert("Thang 12 co 31 ngay!")
+        }
+        else if(thang===2)
+        {
+            alert("Thang 2 co 28 ngay!")
+        }
+        else if(thang===4)
+        {
+            alert("Thang 4 co 30 ngay!")
+        }
+        else if(thang===6)
+        {
+            alert("Thang 6 co 30 ngay!")
+        }
+        else if(thang===9)
+        {
+            alert("Thang 9 co 30 ngay!")
+        }
+        else if(thang===11)
+        {
+            alert("Thang 11 co 30 ngay!")
+        }
+    }
+</script>
 </body>
 </html>

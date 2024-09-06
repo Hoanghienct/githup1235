@@ -1,10 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="my.css">
 </head>
 <body>
-$END$
+<div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="appendOperation('+')">+</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="appendOperation('-')">-</button>
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="appendOperation('*')">*</button>
+        <button onclick="clearDisplay()">AC</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendOperation('/')">/</button>
+    </div>
+</div>
+<script src="my.js"></script>
 </body>
 </html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Máy tính</title>-->
+<!--    <style>-->
+<!--        table, tr, td{-->
+<!--            border: blue 2px;-->
+<!--            text-align: right;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<input type="text" id="thanh" value="0">-->
+<!--<div class="thang">-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td style="text-align:center " colspan="6"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td ><button type="button " name="btn" value="1" onclick="inputValue(this.value)">1</button></td>-->
+<!--            <td ><button type="button " name="btn" value="2" onclick="inputValue(this.value)">2</button></td>-->
+<!--            <td ><button type="button " name="btn" value="3" onclick="inputValue(this.value)">3</button></td>-->
+<!--            <td ><button type="button " name="btn" value="+" onclick="inputValue(this.value)">+</button></td>        </tr>-->
+<!--        <tr>-->
+<!--            <td><button>4</button></td>-->
+<!--            <td><button>5</button></td>-->
+<!--            <td><button>6</button></td>-->
+<!--            <td><button>-</button></td>-->
+<!--        </tr><tr>-->
+<!--        <td><button>7</button></td>-->
+<!--        <td><button>8</button></td>-->
+<!--        <td><button>9</button></td>-->
+<!--        <td><button>*</button></td>-->
+<!--    </tr>-->
+<!--        <tr>-->
+<!--            <td><button>AC</button></td>-->
+<!--            <td><button>0</button></td>-->
+<!--            <td><button>=</button></td>-->
+<!--            <td><button>/</button></td>-->
+<!--        </tr>-->
+
+<!--    </table>-->
+<!--</div>-->
+<!--<script src="my.js">-->
+
+<!--</script>-->
+<!--</form>-->
+<!--<p id="demo"></p>-->
+<!--</body>-->
+<!--</html>-->

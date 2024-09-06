@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Hiển thị ra 20 số trong dãy fibonacci đầu tiên.-->
+<script>
+    let a=0;
+    let b=1;
+    let c =0 ;
+    let tong = 0;
+   for (i =0 ; i<20;i++){
+       c = a + b;
+       a = b;
+       b = c;
+
+       // chia het cho 5
+       // if ( c % 5===0){
+       //     document.write(c + "<br>");
+       //     break;
+       // }
+       //tong 20 so
+       tong +=c;
+
+
+
+   }
+    document.write( tong+ "<br>");
+
+</script>
 </body>
 </html>

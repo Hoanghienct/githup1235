@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, -->
+<!--yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.-->
+<script>
+    let nd = parseInt(prompt("nhập nhiệt độ của bạn"));
+    for (let i =0 ;i<100;i++){
+        if (nd>= 100  ){
+
+            nd = parseInt(prompt("mời bạn nhập giảm nhiệt độ"));
+        }
+        else if (nd <=20){
+
+            nd = parseInt(prompt("mời bạn nhập tăng nhiệt độ"));
+        }
+        else {
+            document.write("nhiệt độ của bạn phù hợp");
+            break;
+        }
+    }
+
+</script>
 </body>
 </html>

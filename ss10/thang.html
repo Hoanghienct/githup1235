@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1>Kiểm tra số ngày trong tháng</h1>
+<input type="number" id="t">
+<button onclick="kt()">Check</button>
+<p id="demo"> </p>
+<script>
+    function kt(){
+        let snt = document.getElementById('t')
+        let kt = snt.value
+        let m=parseInt(kt)
+        let k
+        switch (m){
+            case 1:
+                alert(1)
+                k='Tháng 1 có 31 ngày';
+                break;
+            case 2:
+                k='Tháng 2 có 28 hoặc 29 ngày'; break;
+            case 3:
+                k='Tháng 3 có 31 ngày'; break;
+            case 4:
+                k='Tháng 4 có 30 ngày'; break;
+            case 5:
+                k='Tháng 5 có 31 ngày'; break;
+            case 6:
+                k='Tháng 6 có 30 ngày'; break;
+            case 7:
+                k='Tháng 7 có 31 ngày'; break;
+            case 8:
+                k='Tháng 8 có 31 ngày'; break;
+            case 9:
+                k='Tháng 9 có 30 ngày'; break;
+            case 10:
+                k='Tháng 10 có 31 ngày'; break;
+            case 11:
+                k='Tháng 11 có 30 ngày'; break;
+            case 12:
+                k='Tháng 12 có 31 ngày'; break;
+        }
+        document.getElementById('demo').innerHTML = k;
+    }
+
+</script>
 </body>
 </html>

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="my.js"></script>
 </head>
 <body>
-$END$
+
+<table>
+    <tr>
+        <td>Số tiền gốc ban đầu</td>
+        <td>Lãi suất hàng năm</td>
+        <td>Số lần lãi được nhập </td>
+        <td>Số năm gửi tiền</td>
+    </tr>
+    <tr>
+        <td><input type="number"  name="tiengoc"  id="p"></td>
+        <td><input type="number"  name="laisuat"  id="r"></td>
+        <td><input type="number"  name="laitheoquy"  id="n" value="4"></td>
+        <td><input type="number"  name="sonamgui"  id="t"></td>
+    </tr>
+</table>
+<button onclick="ls()">Tiền nhận được</button>
+<p id="tien"> số tiền nhận được </p>
 </body>
 </html>

@@ -1,10 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    const arr = [];
+    let isX = true;
+
+    let roud=10
+    // Khởi tạo mảng 2 chiều với 5 hàng và 5 cột
+    for (let i = 0; i < roud; i++) {
+        arr[i] = []
+        for (let j = 0; j < roud; j++) {
+            arr[i][j] = "";
+        }
+    }
+
+    // Hiển thị bàn cờ
+    let board = "<table border='1' style='width: 1000px; height: 1000px'>"
+    for (let i = 0; i < roud; i++) {
+        board += "<tr>"
+        for (let j = 0; j < roud; j++) {
+            board += `<td onclick="changeValue(${i}, ${j})">${arr[i][j]}</td>`
+        }
+        board += "</tr>"
+    }
+    board += "</table>"
+    document.write(board)
+
+    function changeValue(i, j) {
+        if (arr[i][j] === "") {
+            if (isX) {
+                arr[i][j] = "X";
+                isX = false
+            } else {
+                arr[i][j] = "O";
+                isX = true
+            }
+            let board = "<table border='1' style='width: 1000px; height: 1000px'>"
+            for (let i = 0; i < roud; i++) {
+                board += "<tr>"
+                for (let j = 0; j < roud; j++) {
+                    // fix lại css
+                    board += `<td onclick="changeValue(${i}, ${j})" style="width: 20px; height: 20px; text-align: center; font-size: 10px">${arr[i][j]}</td>`
+                }
+                board += "</tr>"
+            }
+            board += "</table>"
+            // clear phần body trước khi vẽ lại
+            document.body.innerHTML = ""
+            document.write(board)
+            checkWin()
+        }
+
+    }
+
+    function checkWin() {
+        for (let i = 0; i < roud; i++) {
+            for (let j = 0; j < roud; j++) {
+                if(arr[i][j] === arr[i][j+1] && arr[i][j+1] === arr[i][j+2] && arr[i][j+1] === arr[i][j+3] && arr[i][j+1] === arr[i][j+4]&& arr[i][j]!=="") {
+                    alert(arr[i][j]+" win")
+                }
+                else if(arr[i][j] === arr[i+1][j] && arr[i+1][j] === arr[i+2][j] && arr[i+1][j] === arr[i+3][j] && arr[i+1][j] === arr[i+4][j]&& arr[i][j]!=="") {
+                    alert(arr[i][j]+" win")
+                }
+                else if(arr[i][j] === arr[i+1][j+1] && arr[i][j] === arr[i+2][j+2] && arr[i][j] === arr[i+3][j+3] && arr[i][j] === arr[i+4][j+4]&& arr[i][j]!=="") {
+                    alert(arr[i][j] + " win")
+                }
+                else if(arr[i][j] === arr[i+1][j-1] && arr[i][j] === arr[i+2][j-2] && arr[i][j] === arr[i+3][j-3] && arr[i][j] === arr[i+4][j-4]&& arr[i][j]!=="") {
+                    alert(arr[i][j] + " win")
+                }
+
+
+
+            }
+        }
+    }
+
+
+</script>
 </body>
 </html>

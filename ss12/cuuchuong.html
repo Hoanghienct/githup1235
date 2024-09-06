@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let cc =1
+    cc= "<table border='1px'>"
+    for (i=1 ;i<=10;i++){
+        cc = cc + "<tr>"
+        for (j=1;j<=10;j++){
+            cc = cc + "<td>" + j + "*" + i + "=" + i * j + "</td>";
+        }
+        cc = cc +"</tr>"
+
+    }
+    cc=cc +'</table>'
+    document.write(cc)
+</script>
 </body>
 </html>
