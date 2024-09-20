@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. -->
+<!--Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.-->
+<!--Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.-->
+<script>
+    let a = [];
+    let b = [];
+    let c = [];
+    for (let i = 0; i < 10; i++) {
+        a.push(Math.floor(Math.random() * 100));  // Tạo số nguyên ngẫu nhiên từ 0 đến 99 cho mảng a
+        b.push(Math.floor(Math.random() * 100));  // Tạo số nguyên ngẫu nhiên từ 0 đến 99 cho mảng b
+    }
+    console.log("Mảng a: ", a);
+    console.log("Mảng b: ", b);
+
+
+    for (let i = 0; i < 10; i++){
+        c.push(a[i]);
+        c.push(b[i]);
+
+    }
+
+    console.log("Mảng : ", c);
+</script>
+</body>
+</html>

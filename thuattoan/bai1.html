@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Cho hai xâu kí tự, tìm số lượng ký tự chung giữa chúng.-->
+<!--Input:-->
+<!--Dòng đầu tiên là 1 chuỗi ký tự-->
+<!--Dòng thứ 2 là 1 chuỗi ký tự khác cần so sánh với chuỗi trên-->
+<!--Output: 1 giá trị số nguyên-->
+<!--Ví dụ:-->
+<!--Với s1 = “aabcc” và s2 = “adcaa”, thì kết quả commonCharacterCount(s1, s2) = 3.-->
+<!--Vì xâu s1 và s2 có 3 kí tự chung: 2 kí tự ‘a’ và 1 kí tự ‘c’.-->
+<!--Thời gian 20ph.-->
+<script>
+
+    function commonCharacterCount(s1, s2) {
+        let count = 0;
+
+        let s2Array = s2.split('');
+
+        for (let char of s1) {
+            let index = s2Array.indexOf(char);
+
+            if (index !== -1) {
+                count++;
+                s2Array.splice(index, 1);
+            }
+        }
+
+        return count;
+    }
+
+    const s1 = "aabccggfjkk";
+    const s2 = "adcaafgfkkj";
+    console.log(commonCharacterCount(s1, s2));
+
+</script>
+</body>
+</html>

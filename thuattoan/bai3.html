@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=17296;
+    let suma=0;
+    let b=18416;
+    let sumb=0;
+    for (let i=0; i<a;i++){
+        if(a%i===0){
+            suma+=i;
+        }
+    }
+    for (let j=0; j<b;j++){
+        if(b%j===0){
+            sumb+=j;
+        }
+    }
+    if(suma===b&&sumb===a){
+        alert("là hai số thân thiết");
+    }
+    else {
+        alert("không thân thiết");
+    }
+</script>
+</body>
+</html>

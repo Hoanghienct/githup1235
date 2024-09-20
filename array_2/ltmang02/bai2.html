@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    //     Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ]
+    // sau khi thực hiện đảo ngược sẽ là "162csc"
+
+    let a= [ 'c', 's', 'c', '2', '6', '1' ];
+    let b=[];
+    for (let i =a.length-1 ; i>=0;i--){
+        b.push(a[i]);
+
+    }
+    a=b;
+    let result = a.join('');  // Nối các phần tử mà không có dấu phân cách
+    console.log(result);
+</script>
+</body>
+</html>

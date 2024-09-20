@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Kiểm tra mảng có “đẹp” hay không-->
+<!--Một mảng được gọi là “đẹp” nếu mảng đó chứa một phần tử mà phần tử đó chia mảng làm 2 phần (không rỗng và không chứa phần tử đó) có tổng bằng nhau.-->
+<!--Yêu cầu-->
+<!--Hãy kiểm tra xem một mảng bất kì có phải là một mảng “đẹp” hay không?-->
+<!--Input: 1 mảng các số-->
+<!--Output: 1 giá trị Boolean-->
+<!--Deadline 20ph (edited)-->
+
+<script>
+    let arr=[1,2,1,3,4,7,1];
+    let dau =0;
+
+    let tong=arr.reduce((acc, cur) => acc + cur, 0);
+    let kt=false;
+    for (let i=0; i<arr.length;i++){
+        let end =tong-dau-arr[i];
+           if(dau===end){
+               kt=true;
+        }
+            dau+=arr[i];
+
+    }
+    if (kt===false){
+        alert('mang  ko dep');
+    }
+    else {
+        alert('mang   dep');
+    }
+
+</script>
+
+</body>
+</html>
